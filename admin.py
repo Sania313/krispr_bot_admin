@@ -4,7 +4,7 @@ import os
 
 EXCEL_PATH = "latest_file.xlsx"
 
-st.title("🔐 Admin Panel – Update Excel File")
+st.title("🔐 Admin Panel - Update Excel File")
 
 file_id = st.text_input("Enter Google Drive File ID:")
 

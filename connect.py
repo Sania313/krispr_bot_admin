@@ -2,10 +2,12 @@ import pandas as pd
 from langchain_openai import ChatOpenAI
 from langchain.chains import LLMChain
 import streamlit as st
-from prompt import prompt_template
 
 def main_chatbot(question, excel_path):
     try:
+        # Import inside the function to avoid circular import
+        from prompt import prompt_template
+
         # Load all sheets from the Excel file
         sheets = pd.read_excel(excel_path, sheet_name=None)
 
